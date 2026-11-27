@@ -21,6 +21,12 @@ const MessageSchema = new Schema(
       trim: true,
     },
 
+    replyTo: {
+      type: Schema.Types.ObjectId,
+      ref: "Message",
+      default: null,
+    },
+
     editedAt: {
       type: Date,
       default: null,
